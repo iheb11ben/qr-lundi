@@ -53,9 +53,4 @@ export class UpdateMenuComponent implements OnInit {
     this.route.navigate(['/core/list'])
 
   }
-<<<<<<< HEAD
-=======
-
->>>>>>> 7a67d50289135a1e948bdd9c70e8deed8fbf5abc
-
 }
