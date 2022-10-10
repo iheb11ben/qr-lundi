@@ -21,15 +21,13 @@ export class UpdateMenuComponent implements OnInit {
   ngOnInit(): void {
     this.id=this.activeRoute.snapshot.params['id']
   }
- update(id:string){
-    this.route.navigate(['/core/menu/affiche/'+id])
+//  update(id:string){
+//     this.route.navigate(['/core/menu/affiche/'+id])
     
 
  
-      this.menuServ. updateMenu(id+'',data).subscribe(data=>{this.qrcode=data,console.log("data bilel",data);
-      console.log('bilel',data);
-  });
- 
-  
-  }
+//       this.menuServ. updateMenu(id+'',data).subscribe(data=>{this.qrcode=data,console.log("data bilel",data);
+//       console.log('bilel',data);
+//   });
+
 }
