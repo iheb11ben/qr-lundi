@@ -11,6 +11,7 @@ import { UpdatecarteComponent } from './forms/cartevisite/updatecarte/updatecart
 import { FormsComponent } from './forms/forms.component';
 import { AfficheMenuComponent } from './forms/menu/affiche-menu/affiche-menu.component';
 import { MenuComponent } from './forms/menu/menu.component';
+import { UpdateMenuComponent } from './forms/menu/update-menu/update-menu.component';
 import { UrlComponent } from './forms/url/url.component';
 import { HomeComponent } from './home/home.component';
 import { ListqrComponent } from './listqr/listqr.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
     {path:'form',component:FormsComponent},
     {path:'carte/affiche/:id',component:AfficheComponent},
   {path:'menu',component:MenuComponent},
+  {path:'menu/update/:id',component:UpdateMenuComponent},
   {path:'list',component:ListqrComponent},
   {path:'carte',component:CartevisiteComponent},
   {path:'parametre',component:ParametreComponent},

@@ -8,5 +8,5 @@ const {
 
     urlRouter.route('/').post(createUrlController).get(getUrlController)
     urlRouter.route('/:id').get(getUrlByIdController).patch(updateUrlController).delete(deleteUrlController)
-urlRouter.route('/user').get(getUrlbyUserController)
+urlRouter.route('/user/:id').get(getUrlbyUserController)
 module.exports=urlRouter

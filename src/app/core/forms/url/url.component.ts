@@ -3,6 +3,8 @@ import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels } from 'ngx-qrcode2';
 import Swal from 'sweetalert2';
+import { Url } from './url';
+import { UrlService } from './url.service';
 @Component({
   selector: 'app-url',
   templateUrl: './url.component.html',
@@ -12,11 +14,23 @@ export class UrlComponent implements OnInit {
   elementType= NgxQrcodeElementTypes.URL
   correctionLevel = NgxQrcodeErrorCorrectionLevels.HIGH
   value = ''
-  constructor() { }
+  url:Url={url:'',user:''}
+  constructor(private urlService:UrlService) { }
   ngOnInit(): void {
+    this.url.user=localStorage.getItem('idUser')+''
   }
   alertWithSuccess(){
     Swal.fire('Félicitation !!', 'Votre QR-CODE est Telechargé', 'success')
+  }
+  alertWithSuccess2(){
+    Swal.fire('Félicitation !!', 'Votre QR-CODE est Enregistré', 'success')
+  }
+  creatQRcode(){
+
+this.urlService.createQrCode(this.url).subscribe(data=>{
+  console.log(data);
+  
+})
   }
   public openPDF(): void {
     let DATA: any = document.getElementById('htmlData');
