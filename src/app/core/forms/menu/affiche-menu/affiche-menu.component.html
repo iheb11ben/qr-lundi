@@ -1,0 +1,99 @@
+<!-- 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+  <div>
+<h2 style="text-align:center">Menu</h2>
+
+<div class="card">
+ 
+  <h2>{{qrcode.name}}</h2>
+
+
+  <div *ngFor="let el of qrcode.plat ">
+    <p class="title">{{el.value}}</p>
+</div>
+
+  <div *ngFor="let el of qrcode.prix ">
+    <p class="title">{{el.value}}</p>
+</div>
+ 
+
+  
+
+  <p> 
+     </p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+ </div>
+ <p><button>Contact</button></p>
+
+
+ <ngx-qrcode
+ [elementType]="elementType"
+ [errorCorrectionLevel]="correctionLevel"
+ [value]="value"
+ cssClass="bshadow"></ngx-qrcode>
+
+</div> -->
+
+
+
+
+
+ <div class="form">
+      
+  <ul class="tab-group">
+    <h1 style="font-weight: 800;">____ Menu ____</h1>
+  </ul>
+  
+  <div class="tab-content">
+    <div id="signup">   
+      <h1>{{qrcode.name}}</h1>
+      
+      <!-- <form action="/" method="post"> -->
+
+        
+      
+
+        <div class="card ">
+ 
+          <div class="row">
+            <div class="col-sm-6" *ngFor="let el of qrcode.plat">
+              <li>
+                {{el.value}}  &nbsp;
+              </li>
+            </div>
+          
+       
+        
+            <div class="col-sm-6" *ngFor="let el of qrcode.prix ">
+            <p class="title">  {{el.prix}}</p>
+            </div>
+     
+      </div>
+
+
+    </div>
+    
+
+    </div>
+    
+    <div *ngFor="let el of qrcode.plat ">
+      <p class="title">{{el.value}}</p>
+  </div>
+
+
+
+
+</div> 
+  </div>
+
+  <ngx-qrcode class="d-flex align-items-center justify-content-center"
+  [elementType]="elementType"
+  [errorCorrectionLevel]="correctionLevel"
+  [value]="value"
+  cssClass="bshadow"></ngx-qrcode>
