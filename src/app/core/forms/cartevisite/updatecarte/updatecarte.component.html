@@ -29,7 +29,9 @@
                 </div>
                 <div class="top-row" *ngFor="let val of Qr.email ;let i = index">
                     <label>Email</label>
-                    <input type="email"   [(ngModel)]="val.value"   class="form-control" />
+                    
+                    <input type="email" id="email" name="email"   [(ngModel)]="val.value"   class="form-control" />
+                    
                     <button class="btn btn-danger mr-1 " (click)="remove(i,'email')">Supprimer</button>
                     <div class="invalid-feedback">
                         <div>Description is required</div>
