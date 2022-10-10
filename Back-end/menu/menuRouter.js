@@ -9,6 +9,6 @@ const {
 
 MenuRouter.route('/').post(createMenuController).get(getMenuController)
 MenuRouter.route('/:id').get(getMenuByIdController).patch(updateMenuController).delete(deleteMenuController)
-MenuRouter.route('/menu/:id').get(getMenubyuserController)
+MenuRouter.route('/user/:id').get(getMenubyuserController)
 
 module.exports=MenuRouter

@@ -18,7 +18,10 @@ return this.httpclient.post<any>(this.baseUrl+'menu',data)
 return this.httpclient.get<any>(this.baseUrl+'menu/'+id)
   }
   getbyIduser(id:String):Observable<any>{
-return this.httpclient.get<any>(this.baseUrl+'menu/menu/'+id)
+return this.httpclient.get<any>(this.baseUrl+'menu/user/'+id)
+  }
+  updateMenu(id:String,data:MenuModel):Observable<any>{
+return this.httpclient.patch<any>(this.baseUrl+'menu/'+id,data)
   }
 
 

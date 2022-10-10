@@ -8,14 +8,16 @@ const MenuSchema=new mongoose.Schema(
             type:String,
             required:true,
         },
-        plat:{
-            type:Array,
-            required: true,
-        },
-        prix:{
-            type:Array,
-            required: true,
-        },
+        plat:[{
+           nomPlat : String,
+           prixPlat : Number,
+            
+        }]
+      ,
+        // prix:{
+        //     type:Array,
+        //     required: true,
+        // },
         user:{type:mongoose.Types.ObjectId,
             ref:'user'}
     },
