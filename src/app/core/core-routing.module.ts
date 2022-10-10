@@ -32,7 +32,7 @@ const routes: Routes = [
   {path:'parametre',component:ParametreComponent},
   {path:'url',component:UrlComponent},
   {path:'detail',component:DetailComponent},
-  {path:'update',component:UpdatecarteComponent}
+  {path:'update/:id',component:UpdatecarteComponent}
     
 
 ],canActivate: [AuthGuardGuard]}

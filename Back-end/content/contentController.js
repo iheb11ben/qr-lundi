@@ -1,10 +1,12 @@
 const {createQR,getQR,getallQR,getcontentbyIdUser,updateContent}= require('./contentservice');
+// const validator = require("email-validator");
 const {StatusCodes}= require('http-status-codes')
 
 
 const createQrController=async(req,res)=>{
     // req.body.filename
-    
+    // validator.validate(email)
+    // console.log('verif', validator.validate(email));
     res.status(StatusCodes.CREATED).send(await createQR(req.body))
 
 }

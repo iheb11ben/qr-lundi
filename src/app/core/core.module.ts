@@ -17,7 +17,7 @@ import { Affiche2Component } from './forms/cartevisite/affiche2/affiche2.compone
 import { AfficheMenuComponent } from './forms/menu/affiche-menu/affiche-menu.component';
 import { FormLibreComponent } from './forms/form-libre/form-libre.component';
 import { FormLibre2Component } from './forms/form-libre2/form-libre2.component';
-
+import { UpdatecarteComponent } from './forms/cartevisite/updatecarte/updatecarte.component';
 import { UpdateMenuComponent } from './forms/menu/update-menu/update-menu.component';
 import { UpdatecarteComponent } from './forms/cartevisite/updatecarte/updatecarte.component';
 

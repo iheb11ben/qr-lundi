@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
 import { CartevisiteService } from '../cartevisite.service';
 import { Catremodel } from '../catremodel';
@@ -11,12 +12,12 @@ import { Catremodel } from '../catremodel';
 export class UpdatecarteComponent implements OnInit {
   // Qr:Catremodel={nomQr:'',  nom:[{value:""}],phone:[{value:0}],prenom:[{value:""}],adresse:[{value:""}],email:[{value:""}],ville:[{value:""}],user:''};
   Qr:any={nomQr:'',  nom:[{value:""}],phone:[{value:0}],prenom:[{value:""}],adresse:[{value:""}],email:[{value:""}],ville:[{value:""}],user:''};
-  constructor(private cartes:CartevisiteService) { }
+  constructor(private cartes:CartevisiteService,private activeRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
-    console.log(localStorage.getItem('id'));
     
-    this.cartes.getQrCode(localStorage.getItem('id')+'').subscribe(data=>{this.Qr=data;console.log(data);})
+    let id =this.activeRoute.snapshot.params['id']
+    this.cartes.getQrCode(id).subscribe(data=>{this.Qr=data;console.log(data);})
     
     
     

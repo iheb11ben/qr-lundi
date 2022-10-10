@@ -23,7 +23,7 @@ id:string=''
     ngOnInit(): void {
     
       // this.id = localStorage.getItem('id')+''
-      this.id=localStorage.getItem('idqr')+''
+      this.id=localStorage.getItem('id')+''
       this.affiche(this.id);
       // this.affQr()
 

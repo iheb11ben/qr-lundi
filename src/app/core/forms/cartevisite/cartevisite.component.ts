@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { CartevisiteService } from './cartevisite.service';
 import { Catremodel } from './catremodel';
@@ -11,7 +12,7 @@ import { Catremodel } from './catremodel';
 export class CartevisiteComponent implements OnInit {
 
   qrcode:Catremodel={nomQr:'',  nom:[{value:""}],phone:[{value:0}],prenom:[{value:""}],adresse:[{value:""}],email:[{value:""}],ville:[{value:""}],user:''};
-Qr:Catremodel={nomQr:'',  nom:[{value:""}],phone:[{value:0}],prenom:[{value:""}],adresse:[{value:""}],email:[{value:""}],ville:[{value:""}],user:''};
+Qr:Catremodel={nomQr:'',  nom:[{value:""}],phone:[{value:0}],prenom:[{value:""}],adresse:[{value:""}],email:[{value:""},[Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],ville:[{value:""}],user:''};
 Qr2:Catremodel={nomQr:'',nom:[{value:""}],phone:[{value:0}],prenom:[{value:""}],adresse:[{value:""}],email:[{value:""}],ville:[{value:""}],user:''};
 // phones:number[]=[0,0];
 phones:{value:number}[]=[]
@@ -33,7 +34,7 @@ console.log('iduser',this.Qr.user);
     this.contentServ.createQrCode(this.Qr).subscribe(data=>{
       console.log(data);
       localStorage.setItem('id',data._id)
-      localStorage.setItem('idqr',data._id)
+      // localStorage.setItem('idqr',data._id)
       console.log('/core/carte/affiche/'+data._id);
       
       this.router.navigate(['/core/carte/affiche/'+data._id])
