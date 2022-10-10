@@ -23,6 +23,8 @@ return this.httpclient.get<any>(this.baseUrl+'menu/user/'+id)
   updateMenu(id:String,data:MenuModel):Observable<any>{
 return this.httpclient.patch<any>(this.baseUrl+'menu/'+id,data)
   }
-
+  deleteMenu(id:String):Observable<any>{
+    return this.httpclient.delete<any>(this.baseUrl+'menu/'+id)
+      }
 
 }

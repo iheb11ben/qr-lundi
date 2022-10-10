@@ -19,6 +19,8 @@ import { FormLibreComponent } from './forms/form-libre/form-libre.component';
 import { FormLibre2Component } from './forms/form-libre2/form-libre2.component';
 import { UpdatecarteComponent } from './forms/cartevisite/updatecarte/updatecarte.component';
 import { UpdateMenuComponent } from './forms/menu/update-menu/update-menu.component';
+import { UpdateUrlComponent } from './forms/url/update-url/update-url.component';
+import { AfficheUrlComponent } from './forms/url/affiche-url/affiche-url.component';
 
 
 
@@ -32,7 +34,7 @@ import { UpdateMenuComponent } from './forms/menu/update-menu/update-menu.compon
     ParametreComponent,
     UrlComponent,
     UpdatecarteComponent,
-    AfficheComponent,Affiche2Component, AfficheMenuComponent, FormLibreComponent, FormLibre2Component, UpdateMenuComponent
+    AfficheComponent,Affiche2Component, AfficheMenuComponent, FormLibreComponent, FormLibre2Component, UpdateMenuComponent, UpdateUrlComponent, AfficheUrlComponent
 
    
 

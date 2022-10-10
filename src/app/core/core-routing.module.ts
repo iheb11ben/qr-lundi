@@ -12,6 +12,7 @@ import { FormsComponent } from './forms/forms.component';
 import { AfficheMenuComponent } from './forms/menu/affiche-menu/affiche-menu.component';
 import { MenuComponent } from './forms/menu/menu.component';
 import { UpdateMenuComponent } from './forms/menu/update-menu/update-menu.component';
+import { UpdateUrlComponent } from './forms/url/update-url/update-url.component';
 import { UrlComponent } from './forms/url/url.component';
 import { HomeComponent } from './home/home.component';
 import { ListqrComponent } from './listqr/listqr.component';
@@ -31,10 +32,10 @@ const routes: Routes = [
   {path:'carte',component:CartevisiteComponent},
   {path:'parametre',component:ParametreComponent},
   {path:'url',component:UrlComponent},
+  {path:'url/updateurl/:id',component:UpdateUrlComponent},
+  {path:'url/affiche/:id',component:UpdateUrlComponent},
   {path:'detail',component:DetailComponent},
   {path:'update',component:UpdatecarteComponent}
-    
-
 ],canActivate: [AuthGuardGuard]}
 ];
 
