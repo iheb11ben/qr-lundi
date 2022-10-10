@@ -29,7 +29,8 @@
                 </div>
                 <div class="top-row" *ngFor="let val of Qr.email ;let i = index">
                     <label>Email</label>
-                    <input type="email"   [(ngModel)]="val.value"   class="form-control" />
+                    <input type="email"      [(ngModel)]="val.value"   class="form-control" />
+                  <input type="submit">
                     <button class="btn btn-danger mr-1 " (click)="remove(i,'email')">Supprimer</button>
                     <div class="invalid-feedback">
                         <div>Description is required</div>
@@ -63,12 +64,12 @@
                     <div class="invalid-feedback">
                         <div>Téléphone is required</div>
                     </div>
-                    <button  type="submit" class="btn btn-primary" id="btn" (click)="addphone('adresse')">Ajouter Adresse</button>
+                    <button  type="button" class="btn btn-primary" id="btn" (click)="addphone('adresse')">Ajouter Adresse</button>
                 </div>
 
                 <div class="form-group">
                     <!-- <button type="submit" class="btn btn-primary" >Ajouter</button> -->
-                    <button type="button" class="btn btn-warning float-right"  (click)="submit()"  >
+                    <button type="submit" class="btn btn-warning float-right"  (click)="submit()"  >
                         Valider
                     </button>
                   
@@ -85,4 +86,13 @@
 <div class="card-header" id="nom">
     <h3>Nom de Qr code</h3>
     <input type="text" class="form-control" [(ngModel)]="Qr.nomQr"   class="form-control" />
+</div>
+
+<div class="form-group">
+    <label>Email</label>
+    <input type="text" formControlName="email" class="form-control"  />
+    <div  class="invalid-feedback">
+        <div>Email is required</div>
+        <div>Email must be a valid email address</div>
+    </div>
 </div>
