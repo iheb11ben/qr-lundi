@@ -35,7 +35,13 @@ const routes: Routes = [
   {path:'url/updateurl/:id',component:UpdateUrlComponent},
   {path:'url/affiche/:id',component:UpdateUrlComponent},
   {path:'detail',component:DetailComponent},
+<<<<<<< HEAD
   {path:'update',component:UpdatecarteComponent}
+=======
+  {path:'update/:id',component:UpdatecarteComponent}
+    
+
+>>>>>>> 7a67d50289135a1e948bdd9c70e8deed8fbf5abc
 ],canActivate: [AuthGuardGuard]}
 ];
 

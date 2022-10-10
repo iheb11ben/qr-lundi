@@ -24,7 +24,13 @@ return this.httpclient.get<any>(this.baseUrl+'menu/user/'+id)
 return this.httpclient.patch<any>(this.baseUrl+'menu/'+id,data)
   }
   deleteMenu(id:String):Observable<any>{
+<<<<<<< HEAD
     return this.httpclient.delete<any>(this.baseUrl+'menu/'+id)
       }
+=======
+return this.httpclient.delete<any>(this.baseUrl+'menu/'+id)
+  }
+
+>>>>>>> 7a67d50289135a1e948bdd9c70e8deed8fbf5abc
 
 }
