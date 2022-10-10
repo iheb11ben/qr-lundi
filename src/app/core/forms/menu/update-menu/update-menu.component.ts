@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { MenuModel } from '../menu-model';
 import { SmenuService } from '../smenu.service';
 
@@ -16,18 +17,42 @@ export class UpdateMenuComponent implements OnInit {
     plat: [{ nomPlat: '', prixPlat: 0 }],
     user: '',
   };
+  nomPlat!:string
+  prixPlat!:number
   constructor(private menuServ:SmenuService, private activeRoute:ActivatedRoute,private route:Router) { }
 
   ngOnInit(): void {
     this.id=this.activeRoute.snapshot.params['id']
+    this.menuServ.getbyId(this.id).subscribe(data=>{this.qrcode=data;console.log(data);})
   }
-//  update(id:string){
-//     this.route.navigate(['/core/menu/affiche/'+id])
+ update(){
+    // this.route.navigate(['/core/menu/affiche/'+id])
     
 
  
-//       this.menuServ. updateMenu(id+'',data).subscribe(data=>{this.qrcode=data,console.log("data bilel",data);
-//       console.log('bilel',data);
-//   });
+      this.menuServ. updateMenu(this.id+'',this.qrcode).subscribe(data=>{this.qrcode=data
+      // console.log('bilel',data);
+     
+  });
+ 
+  
+  }
+  ajouterPlat(nomPlat:string,prixPlat:number){
+    this.qrcode.plat.push({nomPlat,prixPlat });
+
+  }
+  deletePlat(i: number){
+
+  
+   
+      this.qrcode.plat.splice(i, 1);
+  
+  }
+  alertWithSuccess(){
+    Swal.fire('Félicitation !!', 'votre menu a été modifié avec succès', 'success')
+    this.route.navigate(['/core/list'])
+
+  }
+
 
 }

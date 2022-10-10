@@ -47,7 +47,10 @@ const deleteMenuController = async(req,res)=>{
     if(!Menu_to_delete){
         return res.status(StatusCodes.BAD_REQUEST).send('id non trouvable')
     }
-    res.status(StatusCodes.OK).send('DELETED')
+    const Menus = await getMenusService()
+    res.status(StatusCodes.OK).send(Menus)
+
+    
 }
 const getMenubyuserController=async(req,res)=>{
     const Menus = await getMenusService()
