@@ -78,5 +78,6 @@ console.log('iduser',this.Qr.user);
       this.Qr.ville.splice(i,1);
     }
   }
+ 
 
 }

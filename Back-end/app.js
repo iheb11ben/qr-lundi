@@ -3,7 +3,7 @@ require('express-async-errors')
 const cors =require('cors')
 const cnx=require('./shared/dbConfig')
 const express = require('express')
-
+const urlRouter=require('./url/urlRouter')
 const userRouter=require('./auth/authRouter');
 const ContentRoute= require('./content/contentrouting')
 const MenuRouter = require ('./menu/menuRouter');
@@ -18,6 +18,7 @@ app.use('/api/v1/',userRouter);
 app.use('/content',ContentRoute)
 app.use('/menu',MenuRouter)
 app.use('/libre',formLibreRouter)
+app.use('/url',urlRouter)
 const start = async () => {
     try {
       await cnx(process.env.URL);

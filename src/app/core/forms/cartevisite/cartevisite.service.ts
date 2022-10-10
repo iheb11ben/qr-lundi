@@ -20,5 +20,9 @@ return this.httpclient.get<Catremodel>(this.baseurl+'/affiche/'+id)
 getQrCodebyIduser(id:string):Observable<any[]>{
 return this.httpclient.get<Catremodel[]>(this.baseurl+'/afficheUser/'+id)
   }
-
+  updateQrCodebyIduser(id:any,data:Catremodel):Observable<any[]>{
+    console.log('idservice',id);
+    
+    return this.httpclient.patch<Catremodel[]>(this.baseurl+'/update/'+id,data)
+      }
 }
